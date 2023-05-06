@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-export default styled.nav`
-  gap: 20px;
+export default styled.div`
   display: flex;
   align-items: center;
+  img {
+    width: 50px;
+  }
 `;
