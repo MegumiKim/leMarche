@@ -23,6 +23,9 @@ img{
   max-width: 100%;
 }
 
+main{
+  min-height: 80vh;
+}
 p{
   line-height:1.5;
 }

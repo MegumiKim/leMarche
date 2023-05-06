@@ -1,3 +1,3 @@
 export default function CheckoutSuccess() {
-  return <div>This is CheckoutSuccess</div>;
+  return <main>This is CheckoutSuccess</main>;
 }
