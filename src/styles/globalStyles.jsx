@@ -26,5 +26,15 @@ img{
 p{
   line-height:1.5;
 }
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+li::marker {
+  content: none;
+}
+
 `;
 export default GlobalStyle;
