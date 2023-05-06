@@ -1,3 +1,5 @@
+import { FaSearch } from "react-icons/fa";
+
 export default function Search() {
-  return <div>Search</div>;
+  return <FaSearch />;
 }

@@ -1,3 +1,5 @@
+import { FaShoppingCart } from "react-icons/fa";
+
 export default function Cart() {
-  return <div>Cart</div>;
+  return <FaShoppingCart />;
 }
