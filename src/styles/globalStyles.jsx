@@ -14,7 +14,9 @@ body{
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
   margin:0;
-  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 img{

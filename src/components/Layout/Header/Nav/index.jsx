@@ -1,3 +1,14 @@
+import Menu from "./Menu";
+import Search from "./Search";
+import Cart from "./Cart";
+import NavStyled from "./Nav.styled";
+
 export default function Nav() {
-  return <div>Nav</div>;
+  return (
+    <NavStyled>
+      <Search />
+      <Cart />
+      <Menu />
+    </NavStyled>
+  );
 }

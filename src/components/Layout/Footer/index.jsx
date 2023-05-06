@@ -1,3 +1,5 @@
+import StyledFooter from "./Footer.styled";
+
 export default function Footer() {
-  return <footer>Website footer</footer>;
+  return <StyledFooter>Website footer</StyledFooter>;
 }
