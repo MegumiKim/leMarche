@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export default styled.footer`
-  background-color: pink;
+  background: ${({ theme }) => theme.colors.bg};
+  background: ${({ theme }) => theme.colors.gradient};
+
+  color: #fff;
   max-width: 100%;
-  padding: 40px;
+  padding: 50px 40px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
