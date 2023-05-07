@@ -20,4 +20,7 @@ export default styled.div`
     object-fit: cover;
     overflow: hidden;
   }
+  a {
+    color: black;
+  }
 `;

@@ -9,6 +9,7 @@ export default function ProductList(props) {
         return (
           <Card
             key={product.id}
+            id={product.id}
             title={product.title}
             price={product.price}
             img={product.imageUrl}
