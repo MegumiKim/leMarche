@@ -25,6 +25,8 @@ img{
 
 main{
   min-height: 80vh;
+  max-width: 1200px;
+  margin:auto;
 }
 p{
   line-height:1.5;
