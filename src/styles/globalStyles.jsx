@@ -32,7 +32,12 @@ main{
   // max-width: 1200px;
   margin:auto;
 }
+
+h1{
+  font-size: 3rem;
+}
 p{
+  font-size: 18px;
   line-height:1.5;
 }
 

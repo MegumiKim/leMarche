@@ -12,13 +12,13 @@ export default styled.div`
   position: relative;
 
   h1 {
-    text-shadow: black 0px 0px 30px;
+    text-shadow: black 0px 0px 20px;
     position: absolute;
     top: 45%;
     right: -50%;
     left: -50%;
     font-size: 3rem;
-    font-family: "Sacramento", cursive;
+    font-family: "Lobster Two", cursive;
     margin: auto;
     color: #fff;
   }

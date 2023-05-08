@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <StyledLogo>
       {/* <img src="./images/logo.jpg" /> */}
-      <Link to="/">LeMarche</Link>
+      <Link to="/">LeMarché</Link>
     </StyledLogo>
   );
 }

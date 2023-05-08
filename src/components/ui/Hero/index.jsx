@@ -3,7 +3,7 @@ import HeroStyled from "./Hero.styled";
 export default function Hero(props) {
   return (
     <HeroStyled>
-      <h1>The World of Market in your pocket</h1>
+      <h1>A Market In Your Pocket</h1>
     </HeroStyled>
   );
 }
