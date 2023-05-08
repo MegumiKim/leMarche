@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default styled.footer`
-  background: ${({ theme }) => theme.colors.bg};
   background: ${({ theme }) => theme.colors.gradient};
 
   color: #fff;

@@ -8,11 +8,13 @@ const GlobalStyle = createGlobalStyle`
 
 html {
   height: 100%;
-  --color-primary: "rgb(34, 193, 195)";
+  --color-primary: #1d9f9d;
+  --color-text:#4e4e4e;
   --gradient:"linear-gradient(25deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)";
 }
 
 body{
+  color: grey;
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   margin:0;
@@ -27,7 +29,7 @@ img{
 
 main{
   min-height: 80vh;
-  max-width: 1200px;
+  // max-width: 1200px;
   margin:auto;
 }
 p{

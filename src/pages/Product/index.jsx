@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useApi from "../../hooks/apiHook";
+import ProductStyled from "./Product.styled";
 
 export default function Product() {
   let { id } = useParams();
@@ -13,10 +14,10 @@ export default function Product() {
     return <div>Error</div>;
   }
   return (
-    <div>
+    <ProductStyled>
       <h1>{data.title}</h1>
       <img src={data.imageUrl}></img>
       <p>{data.description}</p>
-    </div>
+    </ProductStyled>
   );
 }

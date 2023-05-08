@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export default styled.header`
-  background: ${({ theme }) => theme.colors.gradient};
-  color: #fff;
+  color: white;
+  background-color: var(--color-primary);
   font-size: 1.5rem;
   max-width: 100%;
   padding: 20px 40px;
@@ -11,6 +11,6 @@ export default styled.header`
   justify-content: space-between;
 
   a {
-    color: #fff;
+    color: white;
   }
 `;
