@@ -5,7 +5,6 @@ export default function ProductList(props) {
   return (
     <ProductListStyled>
       {props.products.map((product) => {
-        console.log(product);
         return (
           <Card
             key={product.id}
