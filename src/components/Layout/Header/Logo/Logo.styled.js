@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export default styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  img {
-    width: 50px;
-  }
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
 `;

@@ -10,9 +10,8 @@ export default styled.div`
   flex-direction: column;
   align-items: center;
   height: 400px;
+  color:black;
 
-  div {
-  }
   img {
     width: 100%;
     height: 70%;
@@ -20,7 +19,7 @@ export default styled.div`
     object-fit: cover;
     overflow: hidden;
   }
-  a {
-    color: black;
+
+
   }
 `;

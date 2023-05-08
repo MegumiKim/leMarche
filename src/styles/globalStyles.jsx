@@ -1,17 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-// @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
   box-sizing: border-box;
 }
 
-html{
+html {
   height: 100%;
+  --color-primary: "rgb(34, 193, 195)";
+  --gradient:"linear-gradient(25deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)";
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   margin:0;
   min-height: 100vh;
@@ -33,12 +35,7 @@ p{
 }
 
 a{
-  color: #fff;
   text-decoration: none;
-
-  *{
-    color:black;
-  }
 }
 
 li::marker {
