@@ -22,13 +22,13 @@ export default function Checkout() {
 
       <div className="container">
         <section>
-          <h2>Order Confirmation</h2>
-          {cartItems}
-          <div>Total : NOK {total.toFixed(2)}</div>
-        </section>
-        <section>
           <h2>Payment Details</h2>
           <CheckoutForm />
+        </section>
+        <section>
+          <h2>Order Confirmation</h2>
+          {cartItems}
+          <div className="total">Total : NOK {total.toFixed(2)}</div>
         </section>
       </div>
     </CheckoutStyled>
