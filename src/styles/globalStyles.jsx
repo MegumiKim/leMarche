@@ -23,6 +23,10 @@ body{
   grid-template-rows: auto 1fr auto;
 }
 
+main{
+  max-width: 1200px;
+  padding: 2rem;
+}
 img{
   max-width: 100%;
 }

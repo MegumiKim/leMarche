@@ -9,6 +9,7 @@ export default styled.button`
   padding: 15px 60px;
   background-color: var(--color-primary);
   color: ${({ color }) => color || "#fff"};
+  margin: auto;
 
   &:hover {
     opacity: 0.9;
