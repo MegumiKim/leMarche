@@ -37,11 +37,7 @@ export default function Product() {
         <h1>{data.title}</h1>
         <p>{data.description}</p>
         <p className="price">NOK {data.price}</p>
-        <Button
-          handleClick={addToCart}
-          // handleClick={() => dispatch({ type: "Add", payload: data })}
-          text="Add To Cart"
-        ></Button>
+        <Button handleClick={addToCart} text="Add To Cart"></Button>
       </div>
     </ProductStyled>
   );

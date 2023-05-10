@@ -7,11 +7,11 @@ export default function Cart() {
   const GlobalState = useContext(CartContext);
 
   const state = GlobalState.state;
-  const dispatch = GlobalState.dispatch;
+  // const dispatch = GlobalState.dispatch;
   const total = state["total"];
 
   const cartItems = state["item"].map((item) => {
-    return <CartCard item={item} />;
+    return <CartCard key={item.id} item={item} />;
   });
 
   return (
