@@ -2,6 +2,7 @@ import Card from "../Card";
 import ProductListStyled from "./ProductList.styled";
 
 export default function ProductList(props) {
+  console.log(props.products);
   return (
     <ProductListStyled>
       {props.products.map((product) => {
@@ -12,6 +13,7 @@ export default function ProductList(props) {
             title={product.title}
             price={product.price}
             img={product.imageUrl}
+            discountedPrice={product.discountedPrice}
           />
         );
       })}

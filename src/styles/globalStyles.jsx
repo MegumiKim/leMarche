@@ -53,6 +53,12 @@ li::marker {
   content: none;
 }
 
+strike{
+  color: grey;
+}
 
+.discount{
+  color:red;
+}
 `;
 export default GlobalStyle;
