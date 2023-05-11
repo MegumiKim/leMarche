@@ -16,8 +16,6 @@ export default function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    // Validation/Error handling
     console.log(formData);
     console.log(event.target);
     setIsSubmitted(!isSubmitted);

@@ -16,6 +16,8 @@ export default function Checkout() {
     return <CheckoutProduct key={item.id} item={item} />;
   });
 
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <CheckoutStyled>
       <h1>Checkout</h1>
@@ -29,6 +31,7 @@ export default function Checkout() {
           <h2>Order Confirmation</h2>
           {cartItems}
           <div className="total">Total : NOK {total.toFixed(2)}</div>
+          {/* <button onClick={() => setIsModalOpen(true)}> Open Modal</button> */}
         </section>
       </div>
     </CheckoutStyled>

@@ -53,5 +53,6 @@ li::marker {
   content: none;
 }
 
+
 `;
 export default GlobalStyle;

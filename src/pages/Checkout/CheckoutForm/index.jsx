@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import FormStyled from "./Form.styled";
 import Button from "../../../components/ui/Button";
+import Modal from "react-modal";
+Modal.setAppElement("#root");
 
 const initialForm = {
   name: "",
@@ -11,17 +14,16 @@ const initialForm = {
 
 export default function CheckoutForm() {
   const [formData, setFormData] = useState(initialForm);
-
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    // Validation/Error handling
     console.log(formData);
-    console.log(event.target);
+
     setIsSubmitted(!isSubmitted);
     setFormData(initialForm);
+    setIsModalOpen(true);
   }
 
   function handleChange(event) {
@@ -31,6 +33,14 @@ export default function CheckoutForm() {
 
   return (
     <FormStyled onSubmit={handleSubmit}>
+      <Modal className="modal" isOpen={isModalOpen}>
+        <h2>Thank you for your order!</h2>
+        <p>The package will be delivered in 3-7 days.</p>
+
+        <Link to="/">
+          <Button text="Back"></Button>
+        </Link>
+      </Modal>
       <h2>{isSubmitted && "Message Submitted"}</h2>
       <div>
         <label htmlFor="name">Full Name</label>
@@ -79,9 +89,9 @@ export default function CheckoutForm() {
           placeholder="XXX XXX XXX XXX"
           required
           minLength={3}
-          maxLength="19"
+          maxLength="15"
           inputMode="numeric"
-          pattern="[0-9]{13,19}"
+          pattern="[0-9]{4,15}"
           autoComplete="cc-number"
         />
       </div>
