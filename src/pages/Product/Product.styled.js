@@ -14,9 +14,17 @@ export default styled.main`
   .product--descriptions {
     padding: 20px;
   }
-  .price {
-    font-weight: bold;
-  }
+  // .price {
+  //   font-weight: bold;
+  //   display: flex;
+  //   gap: 0.5rem;
+  //   text-align: center;
+  //   margin-bottom: 1rem;
+  // }
+  // p {
+  //   margin: 0;
+  // }
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
   }

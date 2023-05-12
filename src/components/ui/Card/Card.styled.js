@@ -25,11 +25,6 @@ export default styled.div`
   padding: 0.5rem 1rem;
 }
 
-  .price{
-    display: flex;
-    gap: 0.5rem;
-    text-align: center;
-  }
   span{
     color: red;
     text-align: center;

@@ -1,5 +1,5 @@
-import ButtonStyled from "./Button.styled";
+// import BaseButton from "../Button/Button.styled";
 
-export default function Button(props) {
-  return <ButtonStyled onClick={props.handleClick}>{props.text}</ButtonStyled>;
-}
+// export default function Button(props) {
+//   return <BaseButton onClick={props.handleClick}>{props.text}</BaseButton>;
+// }

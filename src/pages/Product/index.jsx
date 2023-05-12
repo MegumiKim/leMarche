@@ -1,25 +1,24 @@
 import { Link, useParams } from "react-router-dom";
 import useApi from "../../hooks/apiHook";
 import ProductStyled from "./Product.styled";
-import Button from "../../components/ui/Button";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/Context";
 import Modal from "react-modal";
+import Price from "../../components/ui/Price";
+import BaseButton, {
+  SecondaryBtn,
+} from "../../components/ui/Button/Button.styled";
+
 Modal.setAppElement("#root");
 
 export default function Product() {
+  const GlobalState = useContext(CartContext);
+  const dispatch = GlobalState.dispatch;
+
   let { id } = useParams();
   const url = `https://api.noroff.dev/api/v1/online-shop/${id}`;
   const { data, isLoading, isError } = useApi(url);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const GlobalState = useContext(CartContext);
-  const dispatch = GlobalState.dispatch;
-
-  function addToCart() {
-    dispatch({ type: "Add", payload: data });
-    setIsModalOpen(true);
-  }
 
   if (isLoading || !data) {
     return <div>Loading Data</div>;
@@ -29,22 +28,41 @@ export default function Product() {
   }
 
   data.quantity = 1;
+
+  function addToCart() {
+    dispatch({ type: "Add", payload: data });
+    setIsModalOpen(true);
+  }
+
   return (
     <ProductStyled>
       <Modal isOpen={isModalOpen}>
         <h2>{data.title} is added to your cart</h2>
-        <Link to="/">
-          <Button text="Back" onClick={() => setIsModalOpen(false)}></Button>
-        </Link>
+        <div className="btn-wrapper">
+          <Link to="/">
+            <BaseButton onClick={() => setIsModalOpen(false)}>
+              Back to home
+            </BaseButton>
+          </Link>
+          <Link to="/Cart">
+            <SecondaryBtn
+              className="btn-secondary"
+              text="View Cart"
+              onClick={() => setIsModalOpen(false)}
+            >
+              View Cart
+            </SecondaryBtn>
+          </Link>
+        </div>
       </Modal>
       <div>
         <img src={data.imageUrl}></img>
       </div>
       <div className="product--descriptions">
         <h1>{data.title}</h1>
+        <Price price={data.price} discountedPrice={data.discountedPrice} />
         <p>{data.description}</p>
-        <p className="price">NOK {data.price}</p>
-        <Button handleClick={addToCart} text="Add To Cart"></Button>
+        <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
       </div>
     </ProductStyled>
   );

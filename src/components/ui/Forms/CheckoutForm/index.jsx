@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import FormStyled from "./Form.styled";
-import Button from "../../../components/ui/Button";
+import FormStyled from "../ContactForm/Form.styled";
 import Modal from "react-modal";
+import BaseButton from "../../Button/Button.styled";
 Modal.setAppElement("#root");
 
 const initialForm = {
@@ -38,7 +38,7 @@ export default function CheckoutForm() {
         <p>The package will be delivered in 3-7 days.</p>
 
         <Link to="/">
-          <Button text="Back"></Button>
+          <BaseButton>Back</BaseButton>
         </Link>
       </Modal>
       <h2>{isSubmitted && "Message Submitted"}</h2>
@@ -95,7 +95,7 @@ export default function CheckoutForm() {
           autoComplete="cc-number"
         />
       </div>
-      <Button text="Confirm & Pay"></Button>
+      <BaseButton>Confirm & Pay</BaseButton>
     </FormStyled>
   );
 }

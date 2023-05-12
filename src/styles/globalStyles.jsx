@@ -27,32 +27,30 @@ main{
   max-width: 1200px;
   padding: 2rem;
   margin: auto;
+  min-height: 100vh;
 }
 img{
   max-width: 100%;
 }
-
-
 
 h1{
   font-size: 3rem;
 }
 p{
   font-size: 18px;
-  line-height:1.5;
+  // line-height:1.5;
 }
 
 a{
   text-decoration: none;
+  color: grey;
 }
 
 li::marker {
   content: none;
 }
 
-strike{
-  color: grey;
-}
+
 
 .discount{
   color:red;

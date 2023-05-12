@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
-import CheckoutSuccess from "./pages/CheckoutSuccess";
 import PageNotFound from "./pages/PageNotFound";
 import Checkout from "./pages/Checkout";
 
@@ -17,7 +16,6 @@ function App() {
         <Route path="product/:id" element={<Product />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
-        <Route path="checkout-success" element={<CheckoutSuccess />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>

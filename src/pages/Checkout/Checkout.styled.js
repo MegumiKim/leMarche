@@ -20,13 +20,13 @@ export default styled.main`
         width: 50px;
       }
 
+      .total{
+        margin-top: 2rem;
+        padding-top: 0.5rem;
+        border-top: 2px solid grey;
+        text-align: right;
+        font-size: 1.8rem;
+      }
+  }
 
-  }
-  .total{
-    margin-top: 1rem;
-    padding-top: 0.5rem;
-    border-top: 2px solid grey;
-    text-align: right;
-    font-size: 1.8rem;
-  }
 `;

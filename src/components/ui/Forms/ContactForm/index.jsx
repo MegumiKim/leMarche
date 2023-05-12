@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormStyled from "./Form.styled";
-import Button from "../Button";
+import BaseButton from "../../Button/Button.styled";
 
 const initialForm = {
   name: "",
@@ -9,7 +9,7 @@ const initialForm = {
   message: "",
 };
 
-export default function Form() {
+export default function ContactForm() {
   const [formData, setFormData] = useState(initialForm);
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -83,7 +83,7 @@ export default function Form() {
       </div>
 
       <div>
-        <Button text="Submit"></Button>
+        <BaseButton text="Submit">Submit</BaseButton>
       </div>
     </FormStyled>
   );

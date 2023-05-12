@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/Context";
-
-import CheckoutForm from "./CheckoutForm";
 import CheckoutStyled from "./Checkout.styled";
 import CheckoutProduct from "./CheckoutProduct";
+import CheckoutForm from "../../components/ui/Forms/CheckoutForm";
 
 export default function Checkout() {
   const state = useContext(CartContext)["state"];
@@ -31,7 +30,6 @@ export default function Checkout() {
           <h2>Order Confirmation</h2>
           {cartItems}
           <div className="total">Total : NOK {total.toFixed(2)}</div>
-          {/* <button onClick={() => setIsModalOpen(true)}> Open Modal</button> */}
         </section>
       </div>
     </CheckoutStyled>

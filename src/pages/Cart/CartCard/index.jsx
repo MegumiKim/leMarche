@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/Context";
+import { FaTrash } from "react-icons/fa";
+import BaseButton from "../../../components/ui/Button/Button.styled";
 
 export default function CartCard(props) {
   const item = props.item;
@@ -13,7 +15,7 @@ export default function CartCard(props) {
       <img src={item.imageUrl}></img>
       <h3>{item.title}</h3>
       <div>NOK {item.price}</div>
-      <div>
+      <div className="qty-wrapper">
         <button onClick={() => dispatch({ type: "Increase", payload: item })}>
           +
         </button>
@@ -29,9 +31,7 @@ export default function CartCard(props) {
         >
           -
         </button>
-        <button onClick={() => dispatch({ type: "Remove", payload: item })}>
-          Remove
-        </button>
+        <FaTrash onClick={() => dispatch({ type: "Remove", payload: item })} />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function Nav() {
   const toggleTheme = useThemeUpdate();
   return (
     <NavStyled>
-      <button onClick={toggleTheme}>dark</button>
+      {/* <BaseButton onClick={toggleTheme}>dark</BaseButton> */}
       <Search />
       <Cart />
       <Menu />
