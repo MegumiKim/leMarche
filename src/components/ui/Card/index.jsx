@@ -14,15 +14,17 @@ export default function Card(props) {
   return (
     <Link to={`product/${props.id}`}>
       <CardStyled>
+        {discountedRate > 0 && <span> {discountedRate} % off</span>}
+
         <img src={props.img} alt={props.title} />
-        <div>
+
+        <div className="card-text">
           <h3>{props.title}</h3>
 
           {discount > 0 ? (
-            <div>
+            <div className="price">
               <strike>NOK {price}</strike>
               <p>NOK {discountedPrice}</p>
-              <p className="discount"> {discountedRate} % off</p>
             </div>
           ) : (
             <p>NOK {price}</p>

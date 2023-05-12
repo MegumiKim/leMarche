@@ -7,9 +7,10 @@ export default styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   height: 400px;
-color: var(--color-text);
+  color: var(--color-text);
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -17,6 +18,25 @@ color: var(--color-text);
     object-position: center center;
     object-fit: cover;
     overflow: hidden;
+  }
+
+.card-text{
+  height: 30%;
+  padding: 0.5rem 1rem;
+}
+
+  .price{
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  span{
+    color: red;
+    text-align: center;
+    line-height: 2rem;
+  }
+  p{
+    margin: 0;
   }
   }
 `;

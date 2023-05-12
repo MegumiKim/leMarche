@@ -26,16 +26,13 @@ body{
 main{
   max-width: 1200px;
   padding: 2rem;
+  margin: auto;
 }
 img{
   max-width: 100%;
 }
 
-main{
-  min-height: 80vh;
-  // max-width: 1200px;
-  margin:auto;
-}
+
 
 h1{
   font-size: 3rem;

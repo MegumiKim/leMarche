@@ -17,11 +17,13 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <div>
       <section>
         <Hero />
       </section>
-      <section>{<ProductList products={data} />}</section>
-    </main>
+      <main>
+        <section>{<ProductList products={data} />}</section>
+      </main>
+    </div>
   );
 }
