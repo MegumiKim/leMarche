@@ -1,7 +1,7 @@
 const cartReducer = (state, action) => {
   let price = action.payload.price;
   let total = state["total"];
-  let currentItems = [...state["item"]];
+  // let currentItems = [...state["item"]];
   let itemToAdd = action.payload;
 
   const itemExits = state["item"].find((item) => item.id === itemToAdd.id);
@@ -28,6 +28,7 @@ const cartReducer = (state, action) => {
         return {
           item: [...state["item"], itemToAdd],
           total: total + price,
+          checkout: false,
         };
       }
       return state;
@@ -36,18 +37,27 @@ const cartReducer = (state, action) => {
       return {
         item: updatedItems,
         total: total + price,
+        checkout: false,
       };
     // return tempState1;
     case "Decrease":
       return {
         item: decreaseItems,
         total: total - price,
+        checkout: false,
       };
     // return tempState2;
     case "Remove":
       return {
         item: state["item"].filter((item) => item.id !== itemToAdd.id),
         total: total - itemToAdd.quantity * itemToAdd.price,
+        checkout: false,
+      };
+    case "Checkout":
+      return {
+        item: state["item"],
+        total: state["total"],
+        checkout: true,
       };
 
     // return tempState3;

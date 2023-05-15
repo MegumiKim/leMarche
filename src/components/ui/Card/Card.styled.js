@@ -20,18 +20,32 @@ export default styled.div`
     overflow: hidden;
   }
 
-.card-text{
-  height: 30%;
-  padding: 0.5rem 1rem;
-}
+  .card-text {
+    height: 30%;
+    padding: 0.5rem 1rem;
+  }
 
-  span{
+  span {
     color: red;
     text-align: center;
     line-height: 2rem;
   }
-  p{
+  p {
     margin: 0;
   }
+`;
+
+export const CardStyledSmall = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  FaTrash:hover {
+    font-size: 1.2rem;
+    color: pink;
   }
 `;

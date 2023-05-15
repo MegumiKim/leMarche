@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import useApi from "../../hooks/apiHook";
-import ProductStyled from "./Product.styled";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/Context";
 import Modal from "react-modal";
@@ -35,7 +34,7 @@ export default function Product() {
   }
 
   return (
-    <ProductStyled>
+    <main className="flex-container-main">
       <Modal isOpen={isModalOpen}>
         <h2>{data.title} is added to your cart</h2>
         <div className="btn-wrapper">
@@ -64,6 +63,6 @@ export default function Product() {
         <p>{data.description}</p>
         <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
       </div>
-    </ProductStyled>
+    </main>
   );
 }

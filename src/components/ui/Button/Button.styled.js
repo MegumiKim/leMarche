@@ -10,8 +10,8 @@ const BaseButton = styled.button`
   background-color: var(--color-primary);
   // color: ${({ color }) => color || "#fff"};
   color: #fff;
-  margin: auto;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 
   &:hover {
     opacity: 0.9;

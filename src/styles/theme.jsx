@@ -13,7 +13,7 @@ const theme = {
       "linear-gradient(25deg,rgb(34, 193, 195) 0%, rgba(253, 187, 45, 1) 100%)",
   },
 
-  mobile: "400px",
+  mobile: "500px",
   tablet: "800px",
 };
 

@@ -1,35 +1,31 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/Context";
-import CartStyled from "./Cart.styled";
-import CartCard from "./CartCard";
 import { Link } from "react-router-dom";
 import BaseButton from "../../components/ui/Button/Button.styled";
+import Cart from "../../components/ui/Cart";
 
-export default function Cart() {
+export default function CartPage() {
   const GlobalState = useContext(CartContext);
-
   const state = GlobalState.state;
-  // const dispatch = GlobalState.dispatch;
   const total = state["total"];
-
-  const cartItems = state["item"].map((item) => {
-    return <CartCard key={item.id} item={item} />;
-  });
+  const dispatch = GlobalState.dispatch;
+  const item = 1;
 
   return (
-    <CartStyled>
+    <main>
       <h1>View Cart</h1>
-      {!total && <h2>No Item in the cart</h2>}
-      {cartItems}
 
+      {!total && <h2>No Item in the cart</h2>}
+      <Cart showQty="true" />
       {total > 0 && (
-        <div>
-          <div className="total">Total: NOK {total.toFixed(2)}</div>
-          <Link to="/checkout">
-            <BaseButton>Check Out</BaseButton>
-          </Link>
-        </div>
+        <Link to="/checkout">
+          <BaseButton
+            onClick={() => dispatch({ type: "Checkout", payload: item })}
+          >
+            Check Out
+          </BaseButton>
+        </Link>
       )}
-    </CartStyled>
+    </main>
   );
 }
