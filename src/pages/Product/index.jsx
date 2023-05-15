@@ -1,13 +1,15 @@
 import { Link, useParams } from "react-router-dom";
 import useApi from "../../hooks/apiHook";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/Context";
 import Modal from "react-modal";
 import Price from "../../components/ui/Price";
 import BaseButton, {
   SecondaryBtn,
 } from "../../components/ui/Button/Button.styled";
-
+import { useLocalStorage } from "../../hooks/localStorageHook";
+import Review from "../../components/ui/Reviews";
+import ProductStyled from "./Product.styled";
 Modal.setAppElement("#root");
 
 export default function Product() {
@@ -34,7 +36,7 @@ export default function Product() {
   }
 
   return (
-    <main className="flex-container-main">
+    <ProductStyled>
       <Modal isOpen={isModalOpen}>
         <h2>{data.title} is added to your cart</h2>
         <div className="btn-wrapper">
@@ -54,15 +56,30 @@ export default function Product() {
           </Link>
         </div>
       </Modal>
-      <div>
-        <img src={data.imageUrl}></img>
+      <div className="flex-container-main">
+        <div>
+          <img src={data.imageUrl}></img>
+        </div>
+        <div className="product--descriptions">
+          <h1>{data.title}</h1>
+          <Price price={data.price} discountedPrice={data.discountedPrice} />
+          {data.rating > 0 && <p>Rating: {data.rating}</p>}
+          <div className="tags">
+            {data.tags &&
+              data.tags.map((tag, index) => {
+                return <p id={index}># {tag}</p>;
+              })}
+          </div>
+          <p>{data.description}</p>
+          <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
+          {data.reviews &&
+            data.reviews.map((review) => {
+              return <Review review={review} />;
+            })}
+        </div>
       </div>
-      <div className="product--descriptions">
-        <h1>{data.title}</h1>
-        <Price price={data.price} discountedPrice={data.discountedPrice} />
-        <p>{data.description}</p>
-        <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
-      </div>
-    </main>
+
+      <h2>Related Products</h2>
+    </ProductStyled>
   );
 }

@@ -11,7 +11,7 @@ export default function Checkout() {
         </section>
         <section>
           <h2>Order Confirmation</h2>
-          <Cart showQty="false" />
+          <Cart />
         </section>
       </div>
     </main>

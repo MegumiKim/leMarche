@@ -33,7 +33,7 @@ export default function CheckoutForm() {
 
   return (
     <FormStyled onSubmit={handleSubmit}>
-      <Modal className="modal" isOpen={isModalOpen}>
+      <Modal isOpen={isModalOpen}>
         <h2>Thank you for your order!</h2>
         <p>The package will be delivered in 3-7 days.</p>
 

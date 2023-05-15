@@ -2,7 +2,6 @@ import Card from "../Card";
 import ProductListStyled from "./ProductList.styled";
 
 export default function ProductList(props) {
-  console.log(props.products);
   return (
     <ProductListStyled>
       {props.products.map((product) => {
