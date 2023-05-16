@@ -7,24 +7,20 @@ import Cart from "../../components/ui/Cart";
 export default function CartPage() {
   const GlobalState = useContext(CartContext);
   const state = GlobalState.state;
-  const total = state["total"];
-  const dispatch = GlobalState.dispatch;
-  const item = 1;
+  const total = state.total;
 
   return (
     <main>
       <h1>View Cart</h1>
-
-      {!total && <h2>No Item in the cart</h2>}
-      <Cart showQty="true" />
-      {total > 0 && (
-        <Link to="/checkout">
-          <BaseButton
-            onClick={() => dispatch({ type: "Checkout", payload: item })}
-          >
-            Check Out
-          </BaseButton>
-        </Link>
+      {total > 0 ? (
+        <div>
+          <Cart />
+          <Link to="/checkout">
+            <BaseButton>Check Out</BaseButton>
+          </Link>
+        </div>
+      ) : (
+        <h2>No Item in the cart</h2>
       )}
     </main>
   );

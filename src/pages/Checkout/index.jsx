@@ -1,8 +1,6 @@
-import CheckoutForm from "../../components/ui/Forms/CheckoutForm";
-import Cart from "../../components/ui/Cart";
 import { useContext } from "react";
 import { CartContext } from "../../context/Context";
-import CartCard from "../../components/ui/Card/CartCard";
+import CheckoutForm from "../../components/ui/Forms/CheckoutForm";
 import CheckoutProduct from "../../components/ui/Card/CheckoutProduct";
 
 export default function Checkout() {

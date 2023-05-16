@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import FormStyled from "../ContactForm/Form.styled";
 import Modal from "react-modal";
 import BaseButton from "../../Button/Button.styled";
+import { CartContext } from "../../../../context/Context";
 Modal.setAppElement("#root");
 
 const initialForm = {
@@ -17,13 +18,20 @@ export default function CheckoutForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const GlobalState = useContext(CartContext);
+  const state = GlobalState.state;
+  const orderedItems = state.item;
+  const placeholder = 1;
+  const dispatch = GlobalState.dispatch;
+
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
+    console.log("Customer info:", formData, "Order Summary:", orderedItems);
 
     setIsSubmitted(!isSubmitted);
     setFormData(initialForm);
     setIsModalOpen(true);
+    dispatch({ type: "Checkout", payload: placeholder });
   }
 
   function handleChange(event) {

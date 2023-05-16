@@ -30,4 +30,12 @@ export default styled.form`
     height: 6rem;
     border-radius: 20px;
   }
+
+  Button {
+    margin: auto;
+  }
+
+  .success {
+    color: var(--color-primary);
+  }
 `;

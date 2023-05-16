@@ -70,7 +70,8 @@ li::marker {
   gap: 2rem;
   padding: 2rem;
   align-items: center;
-  div {
+  
+ >* {
     flex: 1;
   }
 

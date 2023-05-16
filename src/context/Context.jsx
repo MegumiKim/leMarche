@@ -6,7 +6,6 @@ export const Context = (props) => {
   const [state, dispatch] = useReducer(cartReducer, {
     item: [],
     total: 0,
-    checkout: false,
   });
 
   return (

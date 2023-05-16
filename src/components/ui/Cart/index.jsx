@@ -15,7 +15,7 @@ export default function Cart() {
 
   const totalInKrone = krone.format(total);
 
-  const cartItems = state["item"].map((item) => {
+  const cartItems = state.item.map((item) => {
     return <CartCard key={item.id} item={item} />;
   });
 

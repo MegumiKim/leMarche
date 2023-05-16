@@ -11,13 +11,11 @@ const initialForm = {
 
 export default function ContactForm() {
   const [formData, setFormData] = useState(initialForm);
-
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
     console.log(formData);
-    console.log(event.target);
     setIsSubmitted(!isSubmitted);
     setFormData(initialForm);
   }
@@ -29,7 +27,9 @@ export default function ContactForm() {
 
   return (
     <FormStyled onSubmit={handleSubmit}>
-      <h2>{isSubmitted && "Message Submitted"}</h2>
+      {isSubmitted && (
+        <h2 className="success">Message Successfully Submitted</h2>
+      )}
       <div>
         <label htmlFor="name">Full Name</label>
         <input
