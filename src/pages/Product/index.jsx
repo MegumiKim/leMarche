@@ -5,6 +5,7 @@ import { CartContext } from "../../context/Context";
 import Modal from "react-modal";
 import Price from "../../components/ui/Price";
 import BaseButton, {
+  MiniBtn,
   SecondaryBtn,
 } from "../../components/ui/Button/Button.styled";
 import { useLocalStorage } from "../../hooks/localStorageHook";
@@ -20,6 +21,7 @@ export default function Product() {
   const url = `https://api.noroff.dev/api/v1/online-shop/${id}`;
   const { data, isLoading, isError } = useApi(url);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
 
   if (isLoading || !data) {
     return <div>Loading Data</div>;
@@ -56,14 +58,25 @@ export default function Product() {
           </Link>
         </div>
       </Modal>
-      <div className="flex-container-main">
+      <Modal isOpen={isSecondModalOpen}>
         <div>
+          <img src={data.imageUrl}></img>
+        </div>
+        <MiniBtn onClick={() => setIsSecondModalOpen(false)}>X</MiniBtn>
+      </Modal>
+      <section className="flex-container-main">
+        <div className="img-wrapper" onClick={() => setIsSecondModalOpen(true)}>
           <img src={data.imageUrl}></img>
         </div>
         <div className="product--descriptions">
           <h1>{data.title}</h1>
           <Price price={data.price} discountedPrice={data.discountedPrice} />
-          {data.rating > 0 && <p>Rating: {data.rating}</p>}
+          {data.rating > 0 && (
+            <div className="rating">
+              <p>Rating: {data.rating}</p>
+              <span>({data.reviews.length} reviews)</span>
+            </div>
+          )}
           <div className="tags">
             {data.tags &&
               data.tags.map((tag, index) => {
@@ -72,14 +85,15 @@ export default function Product() {
           </div>
           <p>{data.description}</p>
           <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
-          {data.reviews &&
-            data.reviews.map((review) => {
-              return <Review review={review} />;
-            })}
         </div>
-      </div>
-
-      <h2>Related Products</h2>
+      </section>
+      <section className="reviews">
+        {data.reviews && <h2>User Review</h2>}
+        {data.reviews &&
+          data.reviews.map((review) => {
+            return <Review review={review} />;
+          })}
+      </section>
     </ProductStyled>
   );
 }

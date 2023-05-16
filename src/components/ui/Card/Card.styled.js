@@ -38,14 +38,28 @@ export default styled.div`
 export const CardStyledSmall = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  img {
+  > * {
+    flex: 1;
+  }
+  .img-wrapper {
     width: 100px;
     height: 100px;
+    overflow: hidden;
+    text-align: center;
+  }
+  img {
+    width: 100px;
   }
 
-  FaTrash:hover {
-    font-size: 1.2rem;
-    color: pink;
+  .qty-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .bin:hover {
+    color: darkred;
   }
 `;

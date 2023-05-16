@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../../../context/Context";
 import { FaTrash } from "react-icons/fa";
 import { CardStyledSmall } from "../Card.styled";
+import { MiniBtn } from "../../Button/Button.styled";
 
 export default function CartCard(props) {
   const item = props.item;
@@ -13,16 +14,20 @@ export default function CartCard(props) {
 
   return (
     <CardStyledSmall key={item.id} className="card">
-      <img src={item.imageUrl}></img>
+      <div className="img-wrapper">
+        <img src={item.imageUrl}></img>
+      </div>
       <h3>{item.title}</h3>
-      <div>NOK {item.price}</div>
-      {!checkout && (
+      <div> | NOK {item.price}</div>
+      {!checkout ? (
         <div className="qty-wrapper">
-          <button onClick={() => dispatch({ type: "Increase", payload: item })}>
+          <MiniBtn
+            onClick={() => dispatch({ type: "Increase", payload: item })}
+          >
             +
-          </button>
+          </MiniBtn>
           Qty: {item.quantity}
-          <button
+          <MiniBtn
             onClick={() => {
               if (item.quantity > 1) {
                 dispatch({ type: "Decrease", payload: item });
@@ -32,11 +37,14 @@ export default function CartCard(props) {
             }}
           >
             -
-          </button>
+          </MiniBtn>
           <FaTrash
+            className="bin"
             onClick={() => dispatch({ type: "Remove", payload: item })}
           />
         </div>
+      ) : (
+        <p>Qty: {item.quantity}</p>
       )}
     </CardStyledSmall>
   );

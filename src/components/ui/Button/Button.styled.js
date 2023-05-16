@@ -24,4 +24,12 @@ export const SecondaryBtn = styled(BaseButton)`
   color: var(--color-primary);
   border: 3px solid var(--color-primary);
 `;
+export const MiniBtn = styled(SecondaryBtn)`
+  background-color: #fff;
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  padding: 5px 10px;
+  margin: auto;
+`;
+
 export default BaseButton;
