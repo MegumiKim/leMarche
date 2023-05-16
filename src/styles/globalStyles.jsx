@@ -8,15 +8,17 @@ const GlobalStyle = createGlobalStyle`
 
 html {
   height: 100%;
-  --color-primary: #1d9f9d;
+  --color-primary:#f995b5;
+  /* --color-primary: #1d9f9d; */
   --color-text:#4e4e4e;
-  --gradient:"linear-gradient(25deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)";
+  --gradient:linear-gradient(25deg,#fc6b98 0%, rgba(253, 187, 45, 1) 100%);
+  /* --gradient:"linear-gradient(25deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)"; */
 }
 
 body{
   color: grey;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
+  font-size: 18px;
   margin:0;
   min-height: 100vh;
   display: grid;
@@ -81,7 +83,15 @@ li::marker {
 }
 
 @media (max-width: ${({ theme }) => theme.mobile}) {
-    flex-direction: column;
+  body{
+    font-size: 16px;
+  }
+
+  h1{
+    font-size:2rem;
+  }
+
+    
   }
 `;
 export default GlobalStyle;

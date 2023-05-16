@@ -11,6 +11,7 @@ export default styled.div`
   height: 400px;
   color: var(--color-text);
   overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
@@ -26,6 +27,10 @@ export default styled.div`
   }
 
   span {
+    position: absolute;
+    background-color: #fff;
+    display: block;
+    width: 100%;
     color: red;
     text-align: center;
     line-height: 2rem;
@@ -43,6 +48,7 @@ export const CardStyledSmall = styled.div`
   > * {
     flex: 1;
   }
+
   .img-wrapper {
     width: 100px;
     height: 100px;
@@ -61,5 +67,10 @@ export const CardStyledSmall = styled.div`
 
   .bin:hover {
     color: darkred;
+  }
+
+  p {
+    flex: auto;
+    text-align: end;
   }
 `;

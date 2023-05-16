@@ -5,4 +5,11 @@ export default styled.div`
   grid-template: auto auto/ repeat(4, 1fr);
   gap: 20px;
   margin: 30px;
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    grid-template: auto auto/ repeat(2, 1fr);
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    grid-template: auto auto/ repeat(1, 1fr);
+  }
 `;

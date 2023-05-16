@@ -9,7 +9,7 @@ export default function CartCard(props) {
   const GlobalState = useContext(CartContext);
   const state = GlobalState.state;
   const checkout = state["checkout"];
-  console.log(checkout);
+
   const dispatch = GlobalState.dispatch;
 
   return (

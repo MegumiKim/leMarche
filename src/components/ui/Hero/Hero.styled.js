@@ -5,21 +5,27 @@ export default styled.div`
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  background-image: url("./images/hero2.jpg");
-  height: 600px;
-  background-position: cover;
+  background-image: url("./images/image5.webp");
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  height: 80vh;
+  display: flex;
 
   h1 {
     text-shadow: black 0px 0px 20px;
-    position: absolute;
-    top: 45%;
-    right: -50%;
-    left: -50%;
     font-size: 3rem;
     font-family: "Lobster Two", cursive;
     margin: auto;
     color: #fff;
+  }
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    height: 50vh;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: 35vh;
   }
 `;

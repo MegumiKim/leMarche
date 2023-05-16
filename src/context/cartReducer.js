@@ -60,6 +60,13 @@ const cartReducer = (state, action) => {
         checkout: true,
       };
 
+    case "Paid":
+      return {
+        item: [],
+        total: 0,
+        checkout: false,
+      };
+
     // return tempState3;
     default:
       return state;

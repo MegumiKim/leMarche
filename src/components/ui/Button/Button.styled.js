@@ -7,7 +7,8 @@ const BaseButton = styled.button`
   cursor: pointer;
   font-weight: bold;
   padding: 15px 60px;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background: var(--gradient);
   // color: ${({ color }) => color || "#fff"};
   color: #fff;
   margin-right: 1rem;
@@ -21,6 +22,7 @@ const BaseButton = styled.button`
 
 export const SecondaryBtn = styled(BaseButton)`
   background-color: #fff;
+  background: none;
   color: var(--color-primary);
   border: 3px solid var(--color-primary);
 `;
