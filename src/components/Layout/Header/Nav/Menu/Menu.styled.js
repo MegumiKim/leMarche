@@ -21,4 +21,11 @@ export default styled.div`
   li:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    ul {
+      position: absolute;
+      top: 56px;
+    }
+  }
 `;

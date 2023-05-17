@@ -2,7 +2,7 @@ import ReviewsStyled from "./Reviews.styled";
 
 export default function Review(props) {
   const review = props.review;
-
+  console.log(review);
   return (
     <ReviewsStyled key={review.id}>
       <div className="rating-wrapper">

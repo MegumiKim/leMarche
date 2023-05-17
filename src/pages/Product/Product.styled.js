@@ -1,22 +1,20 @@
 import styled from "styled-components";
 
 export default styled.div`
-  margin: 2rem;
+  margin: 1rem;
 
-  .flex-container-main {
-    height: 70vh;
-  }
   .img-wrapper {
-    height: 100%;
+    max-height: 50vh;
     margin: auto;
     overflow: hidden;
-    text-align: center;
-    /* object-position: center center;
-    object-fit: cover; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   img {
-    max-width: none;
+    max-width: 100%;
     height: 100%;
     /* margin: auto; */
   }

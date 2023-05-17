@@ -7,15 +7,13 @@ export default styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  // align-items: center;
   height: 400px;
-  color: var(--color-text);
   overflow: hidden;
   position: relative;
 
   img {
     width: 100%;
-    height: 70%;
+    height: 60%;
     object-position: center center;
     object-fit: cover;
     overflow: hidden;
@@ -37,40 +35,5 @@ export default styled.div`
   }
   p {
     margin: 0;
-  }
-`;
-
-export const CardStyledSmall = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  > * {
-    flex: 1;
-  }
-
-  .img-wrapper {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    text-align: center;
-  }
-  img {
-    width: 100px;
-  }
-
-  .qty-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .bin:hover {
-    color: darkred;
-  }
-
-  p {
-    flex: auto;
-    text-align: end;
   }
 `;

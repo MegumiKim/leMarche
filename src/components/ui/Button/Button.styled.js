@@ -13,7 +13,6 @@ const BaseButton = styled.button`
   color: #fff;
   margin-right: 1rem;
   margin-bottom: 1rem;
-
   &:hover {
     opacity: 0.9;
     transform: scale(0.98);

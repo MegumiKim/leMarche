@@ -69,16 +69,17 @@ li::marker {
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  align-items: center;
+  align-items: baseline;
   
  >* {
+text-align: top;
     flex: 1;
   }
 
   .product--descriptions {
     padding: 20px;
   }
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.tablet}) {
     flex-direction: column;
   }
 }

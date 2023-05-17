@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export default styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-  align-content: right;
-
+  .cart-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    align-content: right;
+  }
   a {
     text-align: center;
   }
-
   .total {
     margin-top: 2rem;
     padding-top: 0.5rem;
@@ -20,7 +20,13 @@ export default styled.div`
     font-size: 1.8rem;
   }
 
+  Link {
+    align-items: right;
+  }
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    flex-direction: column;
+    .cart-wrapper {
+      padding: 0;
+    }
   }
 `;

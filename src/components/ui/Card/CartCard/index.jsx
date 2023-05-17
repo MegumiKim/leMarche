@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../../../../context/Context";
 import { FaTrash } from "react-icons/fa";
-import { CardStyledSmall } from "../Card.styled";
 import { MiniBtn } from "../../Button/Button.styled";
+import { CardStyledSmall } from "./CartCardStyled";
 
 export default function CartCard(props) {
   const item = props.item;
@@ -12,7 +12,7 @@ export default function CartCard(props) {
   return (
     <CardStyledSmall key={item.id} className="card">
       <div className="img-wrapper">
-        <img src={item.imageUrl}></img>
+        <img src={item.imageUrl} alt={item.title}></img>
       </div>
       <h3>{item.title}</h3>
       <div> | NOK {item.price}</div>

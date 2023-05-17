@@ -91,7 +91,7 @@ export default function Product() {
         {data.reviews && <h2>User Review</h2>}
         {data.reviews &&
           data.reviews.map((review) => {
-            return <Review review={review} />;
+            return <Review review={review} key={review.id} />;
           })}
       </section>
     </ProductStyled>
