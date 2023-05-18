@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export default styled.div`
-  margin: 1rem;
-
+export default styled.main`
   .img-wrapper {
     max-height: 50vh;
     margin: auto;

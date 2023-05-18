@@ -65,40 +65,45 @@ export default function Product() {
         </div>
         <MiniBtn onClick={() => setIsSecondModalOpen(false)}>X</MiniBtn>
       </Modal>
-      <section className="flex-container-main">
-        <div className="img-wrapper" onClick={() => setIsSecondModalOpen(true)}>
-          <img src={data.imageUrl}></img>
-        </div>
-        <div className="product--descriptions">
-          <h1>{data.title}</h1>
-          <Price
-            price={data.price}
-            discountedPrice={data.discountedPrice}
-            className="product-price"
-          />
-          {data.rating > 0 && (
-            <div className="rating">
-              <p>Rating: {data.rating}</p>
-              <span>({data.reviews.length} reviews)</span>
-            </div>
-          )}
-          <div className="tags">
-            {data.tags &&
-              data.tags.map((tag, index) => {
-                return <p key={index}># {tag}</p>;
-              })}
+      <div className="container">
+        <section className="flex-container-main">
+          <div
+            className="img-wrapper"
+            onClick={() => setIsSecondModalOpen(true)}
+          >
+            <img src={data.imageUrl}></img>
           </div>
-          <p>{data.description}</p>
-          <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
-        </div>
-      </section>
-      <section className="reviews">
-        {data.reviews && data.reviews.length > 0 && <h2>User Review</h2>}
-        {data.reviews &&
-          data.reviews.map((review) => {
-            return <Review review={review} key={review.id} />;
-          })}
-      </section>
+          <div className="product--descriptions">
+            <h1>{data.title}</h1>
+            <Price
+              price={data.price}
+              discountedPrice={data.discountedPrice}
+              className="product-price"
+            />
+            {data.rating > 0 && (
+              <div className="rating">
+                <p>Rating: {data.rating}</p>
+                <span>({data.reviews.length} reviews)</span>
+              </div>
+            )}
+            <div className="tags">
+              {data.tags &&
+                data.tags.map((tag, index) => {
+                  return <p key={index}># {tag}</p>;
+                })}
+            </div>
+            <p>{data.description}</p>
+            <BaseButton onClick={addToCart}>Add To Cart</BaseButton>
+          </div>
+        </section>
+        <section className="reviews">
+          {data.reviews && data.reviews.length > 0 && <h2>User Review</h2>}
+          {data.reviews &&
+            data.reviews.map((review) => {
+              return <Review review={review} key={review.id} />;
+            })}
+        </section>
+      </div>
     </ProductStyled>
   );
 }

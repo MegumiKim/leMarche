@@ -30,14 +30,19 @@ body{
 
 main{
   max-width: 1200px;
+  width: 100%;
   padding: 2rem;
-  /* margin: auto; */
+  margin: 0 auto;
 }
 
+.container{
+
+}
 section{
   flex: 1;
   margin: 0 auto;
 }
+
 img{
   max-width: 100%;
 }

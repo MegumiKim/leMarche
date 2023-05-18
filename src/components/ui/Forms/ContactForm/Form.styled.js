@@ -18,7 +18,7 @@ export default styled.form`
 
   input,
   textarea {
-    width: 70%;
+    /* width: 70%; */
     height: 2rem;
     border-radius: 50px;
     border: 1px solid #d5d4d8;
