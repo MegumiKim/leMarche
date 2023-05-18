@@ -19,29 +19,25 @@ export default function CartCard(props) {
         <div> | NOK {item.price}</div>
       </div>
       <div className="qty-wrapper">
-        <div>
-          <MiniBtn
-            onClick={() => dispatch({ type: "Increase", payload: item })}
-          >
-            +
-          </MiniBtn>
-          Qty: {item.quantity}
-          <MiniBtn
-            onClick={() => {
-              if (item.quantity > 1) {
-                dispatch({ type: "Decrease", payload: item });
-              } else {
-                dispatch({ type: "Remove", payload: item });
-              }
-            }}
-          >
-            -
-          </MiniBtn>
-          <FaTrash
-            className="bin"
-            onClick={() => dispatch({ type: "Remove", payload: item })}
-          />
-        </div>
+        <MiniBtn onClick={() => dispatch({ type: "Increase", payload: item })}>
+          +
+        </MiniBtn>
+        Qty: {item.quantity}
+        <MiniBtn
+          onClick={() => {
+            if (item.quantity > 1) {
+              dispatch({ type: "Decrease", payload: item });
+            } else {
+              dispatch({ type: "Remove", payload: item });
+            }
+          }}
+        >
+          -
+        </MiniBtn>
+        <FaTrash
+          className="bin"
+          onClick={() => dispatch({ type: "Remove", payload: item })}
+        />
       </div>
     </CardStyledSmall>
   );

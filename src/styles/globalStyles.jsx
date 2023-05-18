@@ -36,6 +36,7 @@ main{
 
 section{
   flex: 1;
+  margin: 0 auto;
 }
 img{
   max-width: 100%;

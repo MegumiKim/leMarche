@@ -71,7 +71,11 @@ export default function Product() {
         </div>
         <div className="product--descriptions">
           <h1>{data.title}</h1>
-          <Price price={data.price} discountedPrice={data.discountedPrice} />
+          <Price
+            price={data.price}
+            discountedPrice={data.discountedPrice}
+            className="product-price"
+          />
           {data.rating > 0 && (
             <div className="rating">
               <p>Rating: {data.rating}</p>

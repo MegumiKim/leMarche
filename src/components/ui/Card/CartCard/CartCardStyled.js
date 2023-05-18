@@ -21,6 +21,9 @@ export const CardStyledSmall = styled.div`
     justify-content: center;
   }
 
+  img {
+    max-width: none;
+  }
   /* img {
     width: 100px;
   } */
@@ -28,12 +31,17 @@ export const CardStyledSmall = styled.div`
   .product-info {
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
   .qty-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
+    button {
+      margin: 0;
+    }
   }
 
   .bin:hover {

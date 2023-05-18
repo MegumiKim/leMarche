@@ -40,11 +40,8 @@ export default styled.div`
     margin: auto;
   }
 
-  .Modal {
-    color: green;
-  }
-
-  .Overlay {
+  .product-price {
+    font-size: 2rem;
     color: red;
   }
 `;
