@@ -11,6 +11,7 @@ import BaseButton, {
 import { useLocalStorage } from "../../hooks/localStorageHook";
 import Review from "../../components/ui/Reviews";
 import ProductStyled from "./Product.styled";
+import ModalStyles, { secondModalStyle } from "../../styles/ModalStyles";
 Modal.setAppElement("#root");
 
 export default function Product() {
@@ -39,7 +40,7 @@ export default function Product() {
 
   return (
     <ProductStyled>
-      <Modal isOpen={isModalOpen}>
+      <Modal isOpen={isModalOpen} style={ModalStyles}>
         <h2>{data.title} is added to your cart</h2>
         <div className="btn-wrapper">
           <Link to="/">
@@ -58,7 +59,7 @@ export default function Product() {
           </Link>
         </div>
       </Modal>
-      <Modal isOpen={isSecondModalOpen}>
+      <Modal isOpen={isSecondModalOpen} style={secondModalStyle}>
         <div>
           <img src={data.imageUrl}></img>
         </div>
@@ -80,7 +81,7 @@ export default function Product() {
           <div className="tags">
             {data.tags &&
               data.tags.map((tag, index) => {
-                return <p id={index}># {tag}</p>;
+                return <p key={index}># {tag}</p>;
               })}
           </div>
           <p>{data.description}</p>
@@ -88,7 +89,7 @@ export default function Product() {
         </div>
       </section>
       <section className="reviews">
-        {data.reviews && <h2>User Review</h2>}
+        {data.reviews && data.reviews.length > 0 && <h2>User Review</h2>}
         {data.reviews &&
           data.reviews.map((review) => {
             return <Review review={review} key={review.id} />;

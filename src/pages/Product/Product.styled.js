@@ -35,6 +35,16 @@ export default styled.div`
     margin-bottom: 1rem;
   }
   .reviews {
+    max-width: 1200px;
     padding: 0 2rem;
+    margin: auto;
+  }
+
+  .Modal {
+    color: green;
+  }
+
+  .Overlay {
+    color: red;
   }
 `;

@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export default styled.footer`
   background: ${({ theme }) => theme.colors.gradient};
-
   color: #fff;
-  max-width: 100%;
+  width: 100%;
   padding: 50px 40px;
   margin: 0 auto;
+  margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  p {
+    margin: 0 1rem;
+  }
 `;

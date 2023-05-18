@@ -5,12 +5,16 @@ export default function CheckoutProduct(props) {
 
   return (
     <CardStyledSmall key={item.id} className="card-small">
-      <div className="img-wrapper">
-        <img src={item.imageUrl} alt={item.title}></img>
-      </div>
       <h3>{item.title}</h3>
-      <div>NOK {item.price}</div>
-      <p>Qty: {item.quantity}</p>
+      <div className="product-info">
+        <div className="img-wrapper">
+          <img src={item.imageUrl} alt={item.title}></img>
+        </div>
+        <div>
+          <div>NOK {item.price}</div>
+          <p>Qty: {item.quantity}</p>
+        </div>
+      </div>
     </CardStyledSmall>
   );
 }

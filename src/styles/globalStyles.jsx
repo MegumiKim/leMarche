@@ -20,6 +20,9 @@ body{
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   margin:0;
+}
+
+#root >div{
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -28,8 +31,7 @@ body{
 main{
   max-width: 1200px;
   padding: 2rem;
-  margin: auto;
-  min-height: 100vh;
+  /* margin: auto; */
 }
 
 section{

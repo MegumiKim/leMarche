@@ -4,6 +4,7 @@ import FormStyled from "../ContactForm/Form.styled";
 import Modal from "react-modal";
 import BaseButton from "../../Button/Button.styled";
 import { CartContext } from "../../../../context/Context";
+import ModalStyles from "../../../../styles/ModalStyles";
 Modal.setAppElement("#root");
 
 const initialForm = {
@@ -41,7 +42,7 @@ export default function CheckoutForm() {
 
   return (
     <FormStyled onSubmit={handleSubmit}>
-      <Modal isOpen={isModalOpen}>
+      <Modal isOpen={isModalOpen} style={ModalStyles}>
         <h2>Thank you for your order!</h2>
         <p>The package will be delivered in 3-7 days.</p>
 

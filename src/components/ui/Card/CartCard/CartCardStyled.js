@@ -25,6 +25,10 @@ export const CardStyledSmall = styled.div`
     width: 100px;
   } */
 
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
   .qty-wrapper {
     display: flex;
     justify-content: center;
@@ -41,10 +45,11 @@ export const CardStyledSmall = styled.div`
     text-align: end;
   }
   @media (max-width: ${({ theme }) => theme.tablet}) {
-    .qty-wrapper {
+    /* .qty-wrapper {
       flex-direction: column;
-    }
-    gap: 0.5rem;
-    font-size: 16px;
+    } */
+    /* gap: 0.5rem;
+    font-size: 16px; */
+    flex-direction: column;
   }
 `;
