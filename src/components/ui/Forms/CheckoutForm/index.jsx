@@ -50,59 +50,61 @@ export default function CheckoutForm() {
           <BaseButton>Back</BaseButton>
         </Link>
       </Modal>
-      <h2>{isSubmitted && "Message Submitted"}</h2>
-      <div>
-        <label htmlFor="name">Full Name</label>
-        <input
-          className="form-input"
-          onChange={handleChange}
-          type="text"
-          name="name"
-          value={formData.name}
-          placeholder="Full Name"
-          required
-          minLength={3}
-        />
-      </div>
-      <div>
-        <label htmlFor="address">Address</label>
-        <input
-          className="form-input"
-          onChange={handleChange}
-          type="text"
-          name="address"
-          value={formData.address}
-          placeholder="Address"
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          className="form-input"
-          onChange={handleChange}
-          type="email"
-          name="email"
-          value={formData.email}
-          placeholder="Email"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="credit">Credit Card</label>
-        <input
-          className="form-input"
-          onChange={handleChange}
-          type="tel"
-          name="cc"
-          value={formData.cc}
-          placeholder="XXX XXX XXX XXX"
-          required
-          minLength={3}
-          maxLength="15"
-          inputMode="numeric"
-          pattern="[0-9]{4,15}"
-          autoComplete="cc-number"
-        />
+      {isSubmitted && <h2>Message Submitted</h2>}
+      <div className="input-group">
+        <div>
+          <label htmlFor="name">Full Name</label>
+          <input
+            className="form-input"
+            onChange={handleChange}
+            type="text"
+            name="name"
+            value={formData.name}
+            placeholder="Full Name"
+            required
+            minLength={3}
+          />
+        </div>
+        <div>
+          <label htmlFor="address">Address</label>
+          <input
+            className="form-input"
+            onChange={handleChange}
+            type="text"
+            name="address"
+            value={formData.address}
+            placeholder="Address"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            className="form-input"
+            onChange={handleChange}
+            type="email"
+            name="email"
+            value={formData.email}
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="credit">Credit Card</label>
+          <input
+            className="form-input"
+            onChange={handleChange}
+            type="tel"
+            name="cc"
+            value={formData.cc}
+            placeholder="XXX XXX XXX XXX"
+            required
+            minLength={3}
+            maxLength="15"
+            inputMode="numeric"
+            pattern="[0-9]{4,15}"
+            autoComplete="cc-number"
+          />
+        </div>
       </div>
       <BaseButton>Confirm & Pay</BaseButton>
     </FormStyled>

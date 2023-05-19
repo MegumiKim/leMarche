@@ -16,6 +16,10 @@ export default styled.form`
     justify-content: space-between;
   }
 
+  .input-group {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
   input,
   textarea {
     /* width: 70%; */

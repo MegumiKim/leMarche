@@ -10,7 +10,7 @@ export default function CheckoutProduct(props) {
         <div className="img-wrapper">
           <img src={item.imageUrl} alt={item.title}></img>
         </div>
-        <div>
+        <div className="price-wrapper">
           <div>NOK {item.price}</div>
           <p>Qty: {item.quantity}</p>
         </div>

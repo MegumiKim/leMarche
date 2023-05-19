@@ -52,6 +52,11 @@ export const CardStyledSmall = styled.div`
     flex: auto;
     text-align: end;
   }
+
+  .price-wrapper {
+    text-align: right;
+  }
+
   @media (max-width: ${({ theme }) => theme.tablet}) {
     /* .qty-wrapper {
       flex-direction: column;

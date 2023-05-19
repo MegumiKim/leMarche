@@ -5,7 +5,7 @@ export default styled.div`
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  background-image: url("./images/image6.webp");
+  background-image: url("./images/hero.webp");
   background-position-x: right;
   background-position-y: bottom;
   background-size: cover;
