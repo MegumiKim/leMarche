@@ -1,11 +1,11 @@
 const cartReducer = (state, action) => {
-  let price = action.payload.price;
-  let total = state.total;
-  let itemToAdd = action.payload;
+  const items = state.item;
+  const price = action.payload.price;
+  const total = state.total;
+  const itemToAdd = action.payload;
+  const itemExits = items.find((item) => item.id === itemToAdd.id);
 
-  const itemExits = state["item"].find((item) => item.id === itemToAdd.id);
-
-  const updatedItems = state["item"].map((item) => {
+  const updatedItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
       return { ...item, quantity: item.quantity + 1 };
     } else {
@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
     }
   });
 
-  const decreaseItems = state["item"].map((item) => {
+  const decreaseItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
       return { ...item, quantity: item.quantity - 1 };
     } else {
@@ -25,7 +25,7 @@ const cartReducer = (state, action) => {
     case "Add":
       if (!itemExits) {
         return {
-          item: [...state["item"], itemToAdd],
+          item: [...items, itemToAdd],
           total: total + price,
         };
       }
@@ -45,7 +45,7 @@ const cartReducer = (state, action) => {
     // return tempState2;
     case "Remove":
       return {
-        item: state["item"].filter((item) => item.id !== itemToAdd.id),
+        item: items.filter((item) => item.id !== itemToAdd.id),
         total: total - itemToAdd.quantity * itemToAdd.price,
       };
     case "Checkout":
