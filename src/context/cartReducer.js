@@ -36,18 +36,19 @@ const cartReducer = (state, action) => {
         item: updatedItems,
         total: total + price,
       };
-    // return tempState1;
+
     case "Decrease":
       return {
         item: decreaseItems,
         total: total - price,
       };
-    // return tempState2;
+
     case "Remove":
       return {
         item: items.filter((item) => item.id !== itemToAdd.id),
         total: total - itemToAdd.quantity * itemToAdd.price,
       };
+
     case "Checkout":
       return {
         item: [],

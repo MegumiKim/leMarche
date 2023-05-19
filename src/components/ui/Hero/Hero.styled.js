@@ -15,7 +15,7 @@ export default styled.div`
 
   h1 {
     text-shadow: black 0px 0px 20px;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: "Lobster Two", cursive;
     margin: auto;
     color: #fff;

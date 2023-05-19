@@ -1,7 +1,7 @@
 import ProductList from "../../components/ui/ProductList";
 import useApi from "../../hooks/apiHook";
 import Hero from "../../components/ui/Hero";
-
+import { Helmet } from "react-helmet";
 // import { CartState } from "../../context/Context";
 
 export default function Home() {
@@ -18,6 +18,14 @@ export default function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>LeMarche | Home</title>
+        <meta
+          name="description"
+          content="Le Marche offers the coolest items on discount and Free Shipping."
+        />
+      </Helmet>
+
       <section>
         <Hero />
       </section>

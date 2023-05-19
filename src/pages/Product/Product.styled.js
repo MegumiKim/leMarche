@@ -29,6 +29,9 @@ export default styled.main`
     }
   }
 
+  .rating-wrapper {
+    align-items: center;
+  }
   .rating {
     margin-bottom: 1rem;
   }
