@@ -19,6 +19,10 @@ export default styled.div`
     text-align: right;
     font-size: 1.8rem;
   }
+  .shipping {
+    text-align: end;
+    margin-top: 0;
+  }
 
   Link {
     align-items: right;

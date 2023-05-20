@@ -27,6 +27,7 @@ export default function Cart() {
             <div className="cart-wrapper">
               {cartItems}
               <div className="total">Total : {formatInKrone(total)}</div>
+              <p className="shipping">*Free Shipping</p>
               <Link to="/checkout">
                 <BaseButton>Check Out</BaseButton>
               </Link>
@@ -35,6 +36,7 @@ export default function Cart() {
             <div className="cart-wrapper">
               {checkoutItems}
               <div className="total">Total : {formatInKrone(total)}</div>
+              <p className="shipping">*Free Shipping</p>
             </div>
           )}
         </CartStyled>

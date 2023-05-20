@@ -1,7 +1,7 @@
 import ProductList from "../../components/ui/ProductList";
 import useApi from "../../hooks/apiHook";
 import Hero from "../../components/ui/Hero";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import SearchForm from "../../components/ui/Forms/SearchForm";
 import { useEffect } from "react";
 import { useContext } from "react";
@@ -25,13 +25,15 @@ export default function Home() {
 
   return (
     <div>
-      <Helmet>
-        <title>LeMarche | Home</title>
-        <meta
-          name="description"
-          content="Le Marche offers the coolest items on discount and Free Shipping."
-        />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>LeMarche | Home</title>
+          <meta
+            name="description"
+            content="Le Marche offers the coolest items on discount and Free Shipping."
+          />
+        </Helmet>
+      </HelmetProvider>
       <section>
         <Hero />
       </section>

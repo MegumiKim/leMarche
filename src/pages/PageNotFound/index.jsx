@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import BaseButton from "../../components/ui/Button/Button.styled";
 
 export default function PageNotFound() {
   return (
     <>
-      <Helmet>
-        <title>LeMarche | Contact</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>LeMarche | 404</title>
+        </Helmet>
+      </HelmetProvider>
       <main>
         <Link to="/">
           <h1>Page Not Found</h1>

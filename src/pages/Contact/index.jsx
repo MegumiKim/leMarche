@@ -1,12 +1,14 @@
 import ContactForm from "../../components/ui/Forms/ContactForm";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Contact() {
   return (
     <>
-      <Helmet>
-        <title>LeMarche | Contact</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>LeMarche | Contact</title>
+        </Helmet>
+      </HelmetProvider>
       <main>
         <h1>Contact</h1>
         <div className="flex-container-main">

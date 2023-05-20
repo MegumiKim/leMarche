@@ -1,13 +1,15 @@
 import CheckoutForm from "../../components/ui/Forms/CheckoutForm";
 import Cart from "../../components/ui/Cart";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Checkout() {
   return (
     <>
-      <Helmet>
-        <title>LeMarche | Checkout</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>LeMarche | Checkout</title>
+        </Helmet>
+      </HelmetProvider>
       <main>
         <h1>Checkout</h1>
         <div className="flex-container-main">
