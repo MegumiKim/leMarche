@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../../../context/Context";
-import { FaTrash } from "react-icons/fa";
+// import { FaTrash } from "react-icons/fa";
 import { MiniBtn } from "../../Button/Button.styled";
 import { CardStyledSmall } from "./CartCardStyled";
 
@@ -38,10 +38,10 @@ export default function CartCard(props) {
             -
           </MiniBtn>
         </div>
-        <FaTrash
+        {/* <FaTrash
           className="bin"
           onClick={() => dispatch({ type: "Remove", payload: item })}
-        />
+        /> */}
       </div>
     </CardStyledSmall>
   );

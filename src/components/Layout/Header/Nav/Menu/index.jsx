@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+// import { FaBars, FaTimes } from "react-icons/fa";
 import StyledMenu from "./Menu.styled";
 
 export default function Menu() {
@@ -8,7 +8,7 @@ export default function Menu() {
 
   return (
     <StyledMenu onClick={() => setShowMenu(!showMenu)}>
-      {showMenu ? <FaTimes /> : <FaBars />}
+      {/* {showMenu ? <FaTimes /> : <FaBars />} */}
       {showMenu && (
         <ul>
           <li>

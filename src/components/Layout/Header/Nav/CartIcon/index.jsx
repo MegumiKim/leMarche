@@ -1,4 +1,4 @@
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CartStyled from "./CartIcon.styled";
 import { useContext } from "react";
@@ -11,7 +11,7 @@ export default function Cart() {
   return (
     <CartStyled>
       <Link to="/Cart">
-        <FaShoppingCart />
+        {/* <FaShoppingCart /> */}
         {numberOfItem > 0 && <span>{numberOfItem}</span>}
       </Link>
     </CartStyled>
