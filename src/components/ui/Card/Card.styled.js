@@ -11,6 +11,10 @@ export default styled.div`
   overflow: hidden;
   position: relative;
 
+  h3 {
+    margin-top: 0;
+  }
+
   img {
     width: 100%;
     height: 60%;

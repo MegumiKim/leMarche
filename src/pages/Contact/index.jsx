@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="flex-container-main">
           <ContactForm />
           <div>
-            <img src="./images/image1.jpg" alt="" />
+            <img src="./images/image1.webp" alt="le Marche user with an ipad" />
           </div>
         </div>
       </main>

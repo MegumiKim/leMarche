@@ -24,9 +24,6 @@ export const CardStyledSmall = styled.div`
   img {
     max-width: none;
   }
-  /* img {
-    width: 100px;
-  } */
 
   .product-info {
     display: flex;
@@ -58,11 +55,6 @@ export const CardStyledSmall = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
-    /* .qty-wrapper {
-      flex-direction: column;
-    } */
-    /* gap: 0.5rem;
-    font-size: 16px; */
     flex-direction: column;
   }
 `;

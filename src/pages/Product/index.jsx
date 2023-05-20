@@ -2,9 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/Context";
 import { Helmet } from "react-helmet";
+import useApi from "../../hooks/apiHook";
 import Modal from "react-modal";
 import Price from "../../components/ui/Price";
-import useApi from "../../hooks/apiHook";
 import BaseButton, {
   MiniBtn,
   SecondaryBtn,

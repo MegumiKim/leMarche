@@ -1,8 +1,17 @@
-import { createContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
+
 import cartReducer from "./cartReducer";
 export const CartContext = createContext();
+export const QueryContext = createContext();
 
 export const Context = (props) => {
+  const [query, setQuery] = useState([]);
   const [state, dispatch] = useReducer(
     cartReducer,
     {
@@ -23,7 +32,9 @@ export const Context = (props) => {
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>
-      {props.children}
+      <QueryContext.Provider value={{ query, setQuery }}>
+        {props.children}
+      </QueryContext.Provider>
     </CartContext.Provider>
   );
 };

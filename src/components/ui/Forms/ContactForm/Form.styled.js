@@ -4,6 +4,7 @@ export default styled.form`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
   max-width: 500px;
   margin: auto;
   padding: 2rem;
@@ -20,9 +21,13 @@ export default styled.form`
     flex-direction: column;
     margin-bottom: 1rem;
   }
+  label {
+    flex: 1;
+  }
   input,
   textarea {
-    /* width: 70%; */
+    flex: 2;
+    width: 100%;
     height: 2rem;
     border-radius: 50px;
     border: 1px solid #d5d4d8;
@@ -37,6 +42,7 @@ export default styled.form`
 
   Button {
     margin: auto;
+    margin-top: 1rem;
   }
 
   .success {
