@@ -8,29 +8,30 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const url = "https://api.noroff.dev/api/v1/online-shop";
   const { data, isLoading, isError } = useApi(url);
-  const [query, setQuery] = useState(data);
+  const [query, setQuery] = useState([]);
+
+  useEffect(() => setQuery(data), [data]);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <h1 className="loader">Loading...</h1>;
   }
 
   if (isError) {
     return <h2>Error Loading Data</h2>;
   }
 
+  // Search Functions
   function handleChange(event) {
     const userInput = event.target.value.toLocaleLowerCase();
+    const keys = ["title", "description"];
+
     // search filters starts working over 3 characters
     if (userInput.length === 0 || userInput.length > 2) {
-      setQuery(userInput);
+      const searchResult = data.filter((item) =>
+        keys.some((key) => item[key].toLowerCase().includes(userInput))
+      );
+      setQuery(searchResult);
     }
-  }
-
-  function search(data) {
-    const keys = ["title", "description"];
-    return data.filter((item) =>
-      keys.some((key) => item[key].toLowerCase().includes(query))
-    );
   }
 
   return (
@@ -54,7 +55,7 @@ export default function Home() {
             placeholder="Search"
             className="form-input"
           />
-          {<ProductList products={search(data)} />}
+          {<ProductList products={query} />}
         </section>
       </main>
     </div>
