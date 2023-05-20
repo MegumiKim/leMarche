@@ -68,8 +68,6 @@ li::marker {
   color:red;
 }
 
-
-
 .flex-container-main{
   display: flex;
   max-width: 1200px;
@@ -82,6 +80,11 @@ li::marker {
  >* {
 text-align: top;
     flex: 1;
+  }
+
+  .loader{
+    text-align: center;
+    margin-left: 2rem;
   }
 
   .product--descriptions {
