@@ -12,6 +12,7 @@ import BaseButton, {
 import Review from "../../components/ui/Reviews";
 import ProductStyled from "./Product.styled";
 import ModalStyles, { secondModalStyle } from "../../styles/ModalStyles";
+import Rating from "../../components/ui/Reviews/Rating";
 Modal.setAppElement("#root");
 
 export default function Product() {
@@ -86,7 +87,7 @@ export default function Product() {
               />
               {data.rating > 0 && (
                 <div className="rating">
-                  <p>Rating: {data.rating}</p>
+                  <Rating rating={data.rating} />
                   <span>({data.reviews.length} reviews)</span>
                 </div>
               )}

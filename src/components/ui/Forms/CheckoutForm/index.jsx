@@ -99,7 +99,7 @@ export default function CheckoutForm() {
             placeholder="XXX XXX XXX XXX"
             required
             minLength={3}
-            maxLength="15"
+            maxLength="9"
             inputMode="numeric"
             pattern="[0-9]{4,15}"
             autoComplete="cc-number"

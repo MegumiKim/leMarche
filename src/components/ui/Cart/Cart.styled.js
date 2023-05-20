@@ -14,7 +14,7 @@ export default styled.div`
   }
   .total {
     margin-top: 2rem;
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     border-top: 2px solid grey;
     text-align: right;
     font-size: 1.8rem;

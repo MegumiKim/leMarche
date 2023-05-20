@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { QueryContext } from "../../../../context/Context";
 import SearchFormStyled from "./SearchForm.styled";
 
-export default function SearchForm(props) {
-  const data = props.data;
+export default function SearchForm({ data }) {
   const { setQuery } = useContext(QueryContext);
 
   // Search Functions
@@ -25,7 +24,7 @@ export default function SearchForm(props) {
       <input
         type="text"
         onChange={handleChange}
-        placeholder="Search"
+        placeholder="Search Products"
         className="form-input"
       />
     </SearchFormStyled>

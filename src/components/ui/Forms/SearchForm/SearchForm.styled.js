@@ -9,6 +9,12 @@ export default styled.div`
     border-radius: 50px;
     border: 1px solid #d5d4d8;
     text-indent: 10px;
-    width: 30%;
+    width: 50%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    input {
+      width: 80%;
+    }
   }
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.nav`
-  gap: 20px;
+  gap: 2rem;
   display: flex;
   align-items: center;
   li {

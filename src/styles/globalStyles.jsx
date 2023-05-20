@@ -9,10 +9,8 @@ const GlobalStyle = createGlobalStyle`
 html {
   height: 100%;
   --color-primary:#f995b5;
-  /* --color-primary: #1d9f9d; */
   --color-text:#4e4e4e;
   --gradient:linear-gradient(25deg,#fc6b98 0%, rgba(253, 187, 45, 1) 100%);
-  /* --gradient:"linear-gradient(25deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%)"; */
 }
 
 body{
@@ -52,7 +50,6 @@ h1{
 }
 p{
   font-size: 18px;
-  // line-height:1.5;
 }
 
 a{
@@ -77,10 +74,10 @@ li::marker {
   padding: 2rem;
   align-items: baseline;
   
- >* {
-text-align: top;
-    flex: 1;
-  }
+  >* {
+      text-align: top;
+      flex: 1;
+    }
 
   .loader{
     text-align: center;

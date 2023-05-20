@@ -2,14 +2,14 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    primary: "#fc6b98",
+    primary: "var(--color-primary)",
     dark: "#ccc",
     light: "#fff",
-    gradient: "linear-gradient(25deg,#fc6b98 0%, rgba(253, 187, 45, 1) 100%)",
+    gradient: "var(--gradient)",
   },
 
   mobile: "500px",
-  tablet: "800px",
+  tablet: "900px",
 };
 
 const Theme = ({ children }) => (

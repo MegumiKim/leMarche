@@ -40,6 +40,9 @@ export default styled.main`
     padding: 0 2rem;
     margin: auto;
   }
+  .star {
+    color: var(--color-primary);
+  }
 
   .product-price {
     font-size: 2rem;

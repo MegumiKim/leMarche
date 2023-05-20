@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CardStyled from "./Card.styled";
 import { Link } from "react-router-dom";
 import Price from "../Price";
