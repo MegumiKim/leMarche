@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import CartStyled from "./CartIcon.styled";
 import { useContext } from "react";
 import { CartContext } from "../../../../../context/Context";
+
 export default function Cart() {
   const GlobalState = useContext(CartContext);
   const state = GlobalState["state"];
   const numberOfItem = state.item.length;
 
+  console.log(numberOfItem);
   return (
     <CartStyled>
       <Link to="/Cart">
