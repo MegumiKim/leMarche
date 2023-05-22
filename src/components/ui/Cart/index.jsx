@@ -6,11 +6,13 @@ import CartCard from "../Card/CartCard";
 import BaseButton from "../Button/Button.styled";
 import formatInKrone from "../../../utils/formatInKrone";
 import CheckoutProduct from "../Card/CheckoutProduct";
+import { useLocation } from "react-router-dom";
 
 export default function Cart() {
+  const location = useLocation();
   const GlobalState = useContext(CartContext);
-  const state = GlobalState.state;
-  const total = state.total;
+  const state = GlobalState.state || [];
+  const total = state.total || 0;
 
   const cartItems = state.item.map((item) => {
     return <CartCard key={item.id} item={item} />;
@@ -23,7 +25,7 @@ export default function Cart() {
     <div>
       {total > 0 ? (
         <CartStyled>
-          {window.location.pathname === "/Cart" ? (
+          {location.pathname === "/Cart" ? (
             <div className="cart-wrapper">
               {cartItems}
               <div className="total">Total : {formatInKrone(total)}</div>

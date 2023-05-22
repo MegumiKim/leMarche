@@ -5,17 +5,18 @@ export const CartContext = createContext();
 export const QueryContext = createContext();
 
 export const Context = (props) => {
+  const initialCartState = {
+    item: [],
+    total: 0,
+  };
   const [query, setQuery] = useState([]);
   const [state, dispatch] = useReducer(
     cartReducer,
-    {
-      item: [],
-      total: 0,
-    },
+    initialCartState,
     // Fetch cart items from local storage if exists
     () => {
       const localData = localStorage.getItem("cart");
-      return localData ? JSON.parse(localData) : { item: [], total: 0 };
+      return localData ? JSON.parse(localData) : initialCartState;
     }
   );
 
