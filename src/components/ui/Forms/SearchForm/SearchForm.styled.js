@@ -10,7 +10,7 @@ export default styled.div`
     border: 1px solid #d5d4d8;
     text-indent: 10px;
     width: 50%;
-    margin: 1rem auto;
+    margin-bottom: 2rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
