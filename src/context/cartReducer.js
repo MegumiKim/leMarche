@@ -3,7 +3,11 @@ const cartReducer = (state, action) => {
   let price = action.payload.price;
   let total = state.total;
   let itemToAdd = action.payload;
-  var itemExits = items.find((item) => item.id === itemToAdd.id);
+  // var itemExits = items.find((item) => item.id === itemToAdd.id);
+
+  const itemExits = items.find(function (item) {
+    return item.id === itemToAdd.id;
+  });
 
   const updatedItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
@@ -23,7 +27,7 @@ const cartReducer = (state, action) => {
 
   switch (action.type) {
     case "Add":
-      if (!itemExits) {
+      if (itemExits === undefined) {
         return {
           item: [...items, itemToAdd],
           total: total + price,
