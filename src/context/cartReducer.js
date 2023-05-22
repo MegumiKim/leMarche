@@ -3,7 +3,7 @@ export default function cartReducer(state, action) {
   let price = action.payload.price;
   let total = state.total;
   let itemToAdd = action.payload;
-  const itemExits = items.find((item) => item.id === itemToAdd.id);
+  const itemExists = items.find((item) => item.id === itemToAdd.id);
 
   const updatedItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
@@ -23,7 +23,7 @@ export default function cartReducer(state, action) {
 
   switch (action.type) {
     case "Add":
-      if (itemExits === undefined) {
+      if (itemExists === undefined) {
         return {
           item: [...items, itemToAdd],
           total: total + price,
