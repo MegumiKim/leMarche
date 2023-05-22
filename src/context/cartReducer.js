@@ -1,5 +1,5 @@
 export default function cartReducer(state, action) {
-  let items = state.item;
+  let items = state.item || [];
   let price = action.payload.price;
   let total = state.total;
   let itemToAdd = action.payload;
@@ -23,7 +23,7 @@ export default function cartReducer(state, action) {
 
   switch (action.type) {
     case "Add":
-      if (itemExists === undefined) {
+      if (!itemExists) {
         return {
           item: [...items, itemToAdd],
           total: total + price,
