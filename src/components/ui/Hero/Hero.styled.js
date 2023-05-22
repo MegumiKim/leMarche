@@ -24,8 +24,4 @@ export default styled.div`
   @media (max-width: ${({ theme }) => theme.tablet}) {
     height: 50vh;
   }
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 35vh;
-  }
 `;
