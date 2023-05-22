@@ -1,13 +1,9 @@
-const cartReducer = (state, action) => {
+export default function cartReducer(state, action) {
   let items = state.item;
   let price = action.payload.price;
   let total = state.total;
   let itemToAdd = action.payload;
-  // var itemExits = items.find((item) => item.id === itemToAdd.id);
-
-  const itemExits = items.find(function (item) {
-    return item.id === itemToAdd.id;
-  });
+  const itemExits = items.find((item) => item.id === itemToAdd.id);
 
   const updatedItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
@@ -62,6 +58,4 @@ const cartReducer = (state, action) => {
     default:
       return state;
   }
-};
-
-export default cartReducer;
+}

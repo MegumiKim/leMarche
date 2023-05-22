@@ -1,6 +1,6 @@
 import { createContext, useEffect, useReducer, useState } from "react";
+import cartReducer from "./cartReducer.js";
 
-import cartReducer from "./cartReducer";
 export const CartContext = createContext();
 export const QueryContext = createContext();
 
@@ -15,7 +15,7 @@ export const Context = (props) => {
     // Fetch cart items from local storage if exists
     () => {
       const localData = localStorage.getItem("cart");
-      return localData ? JSON.parse(localData) : {};
+      return localData ? JSON.parse(localData) : { item: [], total: 0 };
     }
   );
 
