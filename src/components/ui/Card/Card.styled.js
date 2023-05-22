@@ -4,7 +4,6 @@ export default styled.div`
   cursor: pointer;
   border-radius: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  margin: 40px 0;
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -17,7 +16,7 @@ export default styled.div`
 
   img {
     width: 100%;
-    height: 60%;
+    height: 65%;
     object-position: center center;
     object-fit: cover;
     overflow: hidden;

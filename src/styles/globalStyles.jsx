@@ -93,9 +93,7 @@ li::marker {
 }
 
 @media (max-width: ${({ theme }) => theme.mobile}) {
-  body{
-    font-size: 16px;
-  }
+
 
   h1{
     font-size:1.5rem;
