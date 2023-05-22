@@ -6,7 +6,7 @@ import CartStyled from "./CartIcon.styled";
 
 export default function Cart() {
   const GlobalState = useContext(CartContext);
-  const state = GlobalState["state"];
+  const state = GlobalState.state;
   const numberOfItem = state.item.length;
 
   return (
