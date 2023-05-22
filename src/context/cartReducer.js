@@ -1,9 +1,9 @@
 const cartReducer = (state, action) => {
-  const items = state.item;
-  const price = action.payload.price;
-  const total = state.total;
-  const itemToAdd = action.payload;
-  const itemExits = items.find((item) => item.id === itemToAdd.id);
+  let items = state.item;
+  let price = action.payload.price;
+  let total = state.total;
+  let itemToAdd = action.payload;
+  let itemExits = items.find((item) => item.id === itemToAdd.id);
 
   const updatedItems = items.map((item) => {
     if (item.id === itemToAdd.id) {
