@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/Context";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CartStyled from "./Cart.styled";
 import CartCard from "../Card/CartCard";
 import BaseButton from "../Button/Button.styled";
 import formatInKrone from "../../../utils/formatInKrone";
 import CheckoutProduct from "../Card/CheckoutProduct";
-import { useLocation } from "react-router-dom";
 
 export default function Cart() {
   const location = useLocation();
