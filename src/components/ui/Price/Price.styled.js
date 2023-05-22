@@ -9,7 +9,7 @@ export default styled.div`
     gap: 1rem;
   }
   strike {
-    opacity: 0.5;
+    opacity: 0.7;
     text-align: center;
     margin: auto 0;
   }

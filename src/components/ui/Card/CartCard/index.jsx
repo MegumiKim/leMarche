@@ -21,6 +21,7 @@ export default function CartCard({ item }) {
         <div className="qty-wrapper">
           <MiniBtn
             onClick={() => dispatch({ type: "Increase", payload: item })}
+            aria-label="Increase by one"
           >
             +
           </MiniBtn>
@@ -33,12 +34,14 @@ export default function CartCard({ item }) {
                 dispatch({ type: "Remove", payload: item });
               }
             }}
+            aria-label="Decrease by one"
           >
             -
           </MiniBtn>
         </div>
         <FaTrash
           className="bin"
+          aria-label="Delete Item"
           onClick={() => dispatch({ type: "Remove", payload: item })}
         />
       </div>
