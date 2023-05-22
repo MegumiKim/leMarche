@@ -19,16 +19,12 @@ export default function SearchForm({ data }) {
     }
   }
 
-  function handleFocus() {
-    window.scrollTo({ top: 500, behavior: "smooth" });
-  }
-
   return (
     <SearchFormStyled>
       <input
         type="text"
         onChange={handleChange}
-        onClick={handleFocus}
+        onClick={(e) => e.target.scrollIntoView({ behavior: "smooth" })}
         placeholder="Search Products"
         className="form-input"
       />
