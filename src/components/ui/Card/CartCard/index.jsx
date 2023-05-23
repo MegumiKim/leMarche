@@ -20,13 +20,6 @@ export default function CartCard({ item }) {
       <div className="qty-wrapper">
         <div className="qty-wrapper">
           <MiniBtn
-            onClick={() => dispatch({ type: "Increase", payload: item })}
-            aria-label="Increase by one"
-          >
-            +
-          </MiniBtn>
-          Qty: {item.quantity}
-          <MiniBtn
             onClick={() => {
               if (item.quantity > 1) {
                 dispatch({ type: "Decrease", payload: item });
@@ -37,6 +30,13 @@ export default function CartCard({ item }) {
             aria-label="Decrease by one"
           >
             -
+          </MiniBtn>
+          Qty: {item.quantity}
+          <MiniBtn
+            onClick={() => dispatch({ type: "Increase", payload: item })}
+            aria-label="Increase by one"
+          >
+            +
           </MiniBtn>
         </div>
         <FaTrash

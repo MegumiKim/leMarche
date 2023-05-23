@@ -13,6 +13,7 @@ import Review from "../../components/ui/Reviews";
 import ProductStyled from "./Product.styled";
 import ModalStyles, { secondModalStyle } from "../../styles/ModalStyles";
 import Rating from "../../components/ui/Reviews/Rating";
+import Loader from "../../components/ui/Loader";
 Modal.setAppElement("#root");
 
 export default function Product() {
@@ -26,7 +27,7 @@ export default function Product() {
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
 
   if (isLoading || !data) {
-    return <div>Loading Data</div>;
+    return <Loader />;
   }
   if (isError) {
     return <div>Error</div>;
