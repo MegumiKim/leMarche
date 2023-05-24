@@ -6,6 +6,7 @@ import SearchForm from "../../components/ui/Forms/SearchForm";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { QueryContext } from "../../context/Context";
+import Loader from "../../components/ui/Loader";
 
 export default function Home() {
   const url = "https://api.noroff.dev/api/v1/online-shop";
@@ -17,7 +18,7 @@ export default function Home() {
   }, [data]);
 
   if (isLoading) {
-    return <h1 className="loader">Loading...</h1>;
+    return <Loader />;
   }
   if (isError) {
     return <h2>Error Loading Data</h2>;
