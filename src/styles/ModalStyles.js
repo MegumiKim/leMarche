@@ -3,6 +3,7 @@ export default {
     background: "rgba(0, 0, 0, 0.4)",
   },
   content: {
+    maxWidth: "500px",
     margin: "auto",
     display: "flex",
     justifyContent: "center",
