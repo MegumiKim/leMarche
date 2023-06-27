@@ -7,13 +7,15 @@ import { CartContext } from "../../../../../context/Context";
 export default function Cart() {
   const GlobalState = useContext(CartContext);
   const state = GlobalState.state || [];
-  const numberOfItem = state.item.length;
+  const totalItems = state.totalItems || 0;
+
+  console.log(totalItems);
 
   return (
     <CartStyled>
       <Link to="/Cart" aria-label="Check my cart">
         <FaShoppingCart />
-        {numberOfItem > 0 && <span>{numberOfItem}</span>}
+        {totalItems > 0 && <span>{totalItems}</span>}
       </Link>
     </CartStyled>
   );
