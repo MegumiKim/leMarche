@@ -15,10 +15,14 @@ export default styled.div`
 
   li {
     margin: 0 0 10px 10px;
-    list-style-type: none;
+    /* list-style-type: none; */
   }
 
   li:hover {
+    font-style: italic;
+  }
+
+  .active {
     text-decoration: underline;
   }
 

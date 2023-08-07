@@ -13,7 +13,7 @@ export default function Cart() {
 
   return (
     <CartStyled>
-      <Link to="/Cart" aria-label="Check my cart">
+      <Link to="/cart" aria-label="Check my cart">
         <FaShoppingCart />
         {totalItems > 0 && <span>{totalItems}</span>}
       </Link>

@@ -11,7 +11,7 @@ export default function SearchForm({ data }) {
     const keys = ["title", "description"];
 
     // search filters starts working over 3 characters
-    if (userInput.length === 0 || userInput.length > 2) {
+    if (userInput.length === 0 || userInput.length > 1) {
       const searchResult = data.filter((item) =>
         keys.some((key) => item[key].toLowerCase().includes(userInput))
       );

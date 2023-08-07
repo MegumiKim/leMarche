@@ -48,4 +48,8 @@ export default styled.form`
   .success {
     color: var(--color-primary);
   }
+
+  .error {
+    color: var(--color-primary);
+  }
 `;

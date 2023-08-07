@@ -33,9 +33,7 @@ main{
   margin: 0 auto;
 }
 
-.container{
 
-}
 section{
   flex: 1;
   margin: 0 auto;
