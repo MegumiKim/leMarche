@@ -1,12 +1,12 @@
 # LeMarche
 
-[project's demo site](https://lemarche.kimuramegumi.site/)
+[project's demo site](https://lemarche.megumi.no/)
 
 ![Homepage Preview](./public/images/lemarche.jpg)
 
 ## Brief
 
-Reactive and responsive E-commerce website using Noroff API.
+An interface for an fictional online shopping platform, utilizing data from a Noroff API.
 
 ## Built With
 
@@ -31,7 +31,7 @@ npm i
 ### Running
 
 ```bash
-npm run build
+npm run dev
 ```
 
 ## Contact
