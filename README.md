@@ -6,11 +6,11 @@
 
 ## Brief
 
-An interface for an fictional online shopping platform, utilizing data from a Noroff API.
+An interface for an fictional online shopping platform, utilizing data from a Noroff API. The application enables users to browse products, perform searches, and simulate a realistic purchasing process.
 
 ## Built With
 
-React, JS
+React, JS, styled components
 
 ## Getting Started
 
